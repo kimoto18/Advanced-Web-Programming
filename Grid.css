@@ -1,0 +1,48 @@
+body{
+    width: 572px;
+}
+header{
+    border: 2px solid #17a2b8;
+    height: 100px;
+    padding-top: 10px;
+}
+div#one{
+    border: 2px solid #fd7e14;
+    height: 300px;
+}
+
+div#two{
+    float: left;
+    width: 374px;
+    border: 2px dashed darkblue;
+    height: 296px;
+}
+
+div#three{
+    float: right;
+    width: 186px;
+    border: 2px dashed darkred;
+    height: 296px;
+}
+
+div#column {
+    border: 2px solid grey;
+    height: 287px ;
+    float: left;
+    width: 116px;
+    margin: 2px 2px;
+}
+
+div#row {
+    border: 2px solid #d63384;
+    height:66px ;
+    float: right;
+    width: 177px;
+    margin: 2px 2px;
+}
+
+footer {
+    border: solid 2px #6f42c1;
+    height: 100px;
+    padding-top: 10px;
+}
