@@ -1,0 +1,9 @@
+#img1 {
+    float:left;
+    display: block;
+}
+
+#img2 {
+    float: right;
+    display: block;
+}
