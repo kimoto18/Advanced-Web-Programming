@@ -1,3 +1,6 @@
+//Kyle Kimoto//
+//Advanced Web Programming//
+//1/24/24
 //Let Variables//
 
 let employeeName = 'Duncan';
