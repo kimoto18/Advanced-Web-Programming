@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Calculator</title>
+
+        <style>
+            .calc_container {
+                border: 2px solid rgb(153, 144, 144);
+                width: 150px;
+                background-color: rgb(244, 244, 228);
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            #display {
+                width: 130px;
+                margin-top: 10px;
+                height: 30px;
+                text-align: right;
+                font-size: large;
+            }
+
+            div {
+                margin-top:10px ;
+            }
+
+            button {
+                width: 30px;
+                border-radius: 5px;
+                border: 1px solid rgb(153, 144, 144);
+            }
+
+            #equal_to {
+                width: 130px;
+                margin-bottom: 10px;
+                background-color: rgb(89, 189, 133);
+                border: 2px solid rgb(89, 189, 133);
+                color: white;
+            }
+
+            #AC {
+                background-color: rgb(228, 105, 105);
+                border: 2px solid  rgb(228, 105, 105);
+                color: white;
+                padding-left: 4px;
+            }
+
+            .operator {
+                background-color: lightgray;
+                border: 2px solid lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calc_container">
+            <input type="text" id="display" readonly>
+            <div>
+                <button onclick="
+                    calculation += '1';
+                    document.querySelector('#display').value = calculation;
+                    ">1</button>
+                <button onclick="
+                    calculation += '2';
+                    document.querySelector('#display').value = calculation;
+                ">2</button>
+                <button onclick="
+                    calculation += '3';
+                    document.querySelector('#display').value = calculation;
+                ">3</button>
+                <button class="operator" 
+                    onclick="calculation += '+';
+                    document.querySelector('#display').value = calculation;
+                    ">+</button>
+            </div>
+            <div>
+                <button onclick="calculation += '4';
+                document.querySelector('#display').value = calculation;">4</button>
+                <button onclick="calculation += '5';
+                document.querySelector('#display').value = calculation;">5</button>
+                <button onclick=" calculation += '6';
+                document.querySelector('#display').value = calculation;">6</button>
+                <button class="operator" onclick=" calculation += '-';
+                document.querySelector('#display').value = calculation;">-</button>
+            </div>
+            <div>
+                <button onclick=" calculation += '7';
+                document.querySelector('#display').value = calculation;">7</button>
+                <button onclick=" calculation += '8';
+                document.querySelector('#display').value = calculation;">8</button>
+                <button onclick=" calculation += '9';
+                document.querySelector('#display').value = calculation; ">9</button>
+                <button class="operator" onclick=" calculation += '/';
+                document.querySelector('#display').value = calculation;">/</button>
+            </div>
+            <div>
+                <button id="AC" onclick="
+                    calculation = '';
+                document.querySelector('#display').value = calculation;">AC</button>
+                <button onclick=" calculation += '0';
+                document.querySelector('#display').value = calculation;">0</button>
+                <button onclick=" calculation += '.';
+                document.querySelector('#display').value = calculation;">.</button>
+                <button class="operator" onclick=" calculation += '*';
+                document.querySelector('#display').value = calculation;">X</button>
+            </div>
+            <div>
+                <button  id="equal_to" onclick=" calculation =eval(calculation);
+                document.querySelector('#display').value = calculation;">=</button>
+            </div>
+        </div>
+
+        <script>
+            let calculation = '';
+
+            document.querySelector('#display').value = calculation;
+        </script>
+    </body>
+</html>
