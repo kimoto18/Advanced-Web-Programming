@@ -118,17 +118,21 @@
 
     <script>
         function calculateTip(){
+            //Input values//
             const BA = parseFloat(document.getElementById('BA').value);
             const TP = parseFloat(document.getElementById('TP').value);
 
+            // Correction for input values //
             if (isNaN(BA) || isNaN(TP)) {
                 alert('Please enter valid Bill Amount and Tip Percentage!');
                 return;
             }
 
+            //Calculate tip and total//
             const TA = (BA * TP) / 100;
             const Total = BA + TA;
 
+            // Showing final results //
             document.getElementById('TA').value = TA.toFixed(2);
             document.getElementById('Total').value = Total.toFixed(2);
         }
