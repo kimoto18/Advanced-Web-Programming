@@ -41,6 +41,7 @@ timeTillRetirement(57);
 
 
 /*
+function gradeCalculator() {
     const first_score = parseInt(prompt('Enter your first score'));
     const second_score = parseInt(prompt('Enter your second score'));
     const third_score = parseInt(prompt('Enter your third score'));
