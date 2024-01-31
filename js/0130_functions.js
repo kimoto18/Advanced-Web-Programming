@@ -33,3 +33,43 @@ function timeTillRetirement(age) {
 }
 
 timeTillRetirement(57);
+
+//// Grade Calculator 
+//// Take 3 inputs from the user using alert boxes. Ex: Enter math score. 
+//// average<70 --> C; greater than 70 and less than 90 --> B; A
+//// Display/ Output the grade in an alert box
+
+
+/*
+    const first_score = parseInt(prompt('Enter your first score'));
+    const second_score = parseInt(prompt('Enter your second score'));
+    const third_score = parseInt(prompt('Enter your third score'));
+
+    const ave_score = (first_score+second_score+third_score)/3;
+
+    if(ave_score<70) {
+        alert('C Grade');
+    }else if(ave_score>=70 && ave_score<90) {
+        alert('B Grade');
+    }else {
+        alert('A Grade');
+    }87
+}
+
+gradeCalculator();
+*/
+
+//// Savings Calculator
+
+function calculateTax(salary) {
+    return 0.30*salary;
+}
+
+function calculateSavings(salary, rent, expense) {
+    const tax_deductions = calculateTax(salary);
+    total_expenses = tax_deductions+rent+expense;
+    net_savings = salary - total_expenses;
+    console.log(`Salary: ${salary} Savings:${net_savings}`);
+}
+
+calculateSavings(3000, 850, 1200);
