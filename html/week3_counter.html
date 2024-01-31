@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 3 Counter</title>
+
+    <style>
+      input{
+         width: 60px;
+         height: 30px;
+         border-radius: 10px;
+         margin-left: 50px;
+         text-align: center;
+      }
+      div{
+         margin-top: 10px;
+         margin-left: 45px;
+      }
+    </style>
  </head>
  <body>
-      <script src="/js/week3_counter.js"></script>
+      <h1> Counter App</h1>
+      <input type="text" id="display" readonly>
+      <div>
+         <button onclick="calculation += 1; document.querySelector('#display').value = calculation;">+</button>
+         <button onclick="calculation -= 1; document.querySelector('#display').value = calculation;">-</button>
+         <button onclick="calculation = 0; document.querySelector('#display').value = calculation;">0</button>
+      </div>
+      <script src="/js/week3_counter.js">
+         let calculation = '0';
+
+         document.querySelector('#display').value = calculation;
+      </script>
+      
  </body>
  </html>

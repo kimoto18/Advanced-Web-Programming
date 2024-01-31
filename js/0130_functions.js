@@ -62,6 +62,7 @@ gradeCalculator();
 
 //// Savings Calculator
 
+/*
 function calculateTax(salary) {
     return 0.30*salary;
 }
@@ -74,3 +75,24 @@ function calculateSavings(salary, rent, expense) {
 }
 
 calculateSavings(3000, 850, 1200);
+*/
+
+let x = 10; // Global scoped variable
+
+function run(){
+    let y = 20;
+    console.log(x);
+    console.log(`y from inside the function ${y}`)
+    console.log(`z from inside the functuion ${z}`);
+}
+console.log(`y from global: ${y}`)
+run();
+
+if(true) {
+    let z = 30;
+    console.log(x);
+    console.log(`z from inside if ${z}`);
+    console.log(`y from inside if ${y}`);
+}
+
+console.log(`z from global ${z}`);
