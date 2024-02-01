@@ -1,3 +1,4 @@
+// My attempt for a counter using JS. It was much easier through HTML //
 let counterValue = 0;
 
 function updateCounter(){
