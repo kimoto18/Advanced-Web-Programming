@@ -118,6 +118,32 @@ const country_obj = {
 const {country: cntry} = country_obj;
 console.log(cntry);
 
-const {country, population} = country_obj;
+const {country, population, ...restVars} = country_obj;
 console.log(country);
 console.log(population);
+console.log(restVars);
+
+const obj1 = {
+    key1: "value1",
+    key2: "value2"
+}
+
+const obj2 = {
+    key1: "value1",
+    key2: "value2"
+}
+
+// ... --> Spread operator
+const obj3 = {...obj1, ...obj2}
+console.log(obj3);
+
+const obj4 = {...obj1, ...obj2, key5: "value5"};
+console.log(obj4);
+
+const obj5 = {..."abc"};
+console.log(obj5);
+
+const obj6 = {...["Item1", "Item2"]}
+console.log(obj6);
+
+
