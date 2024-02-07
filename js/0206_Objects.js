@@ -56,3 +56,23 @@ product.test_fun();
 Object.freeze(product);
 product['inStock'] = true;
 console.log(product);
+
+
+//// JSON Data
+[{
+    "name": "John",
+    "age": 24
+}]
+
+// Converting a JS object into JSON string
+console.log(JSON.stringify(person));
+console.log(typeof JSON. stringify(person));
+
+person2 = JSON.stringify(person);
+
+// Convert JSOn to a JS object
+person2_obj = JSON.parse(person2);
+console.log(typeof person2_obj); 
+
+
+
