@@ -5,6 +5,7 @@
 // Used to represent real-world entities. Ex: Person, product, bank account etc...
 // Key-value pairs
 
+/*
 //// 1. Simple Person Object
 const person = {
     name: "John",
@@ -73,6 +74,50 @@ person2 = JSON.stringify(person);
 // Convert JSOn to a JS object
 person2_obj = JSON.parse(person2);
 console.log(typeof person2_obj); 
+*/
+
+//// Objects are references 
+// Stack -- stores primitives; creates a copy 
+// Heap -- stores non primitives; creates references
 
 
+/*
+let user1 = 'Joe';
+let user2 = user1;
 
+console.log(user1);
+console.log(user2);
+
+user2 = 'Amy';
+console.log(user1);
+console.log(user2);
+
+let user_obj1 = {
+    email: 'joe@gmail.com',
+    age: 23
+}
+
+let user_obj2 = user_obj1;
+console.log(user_obj1);
+console.log(user_obj2);
+
+user_obj2['age'] = 70;
+console.log(user_obj1);
+console.log(user_obj2);
+*/
+
+//// Destructuring
+const country_obj = {
+    population: '300M',
+    country: 'USA'
+}
+
+//const country = country_obj['country'];
+//console.log(country);
+
+const {country: cntry} = country_obj;
+console.log(cntry);
+
+const {country, population} = country_obj;
+console.log(country);
+console.log(population);
