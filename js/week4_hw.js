@@ -1,4 +1,4 @@
-
+// Number 1
 // Creating my function for leap year
 function isLeapYear(year) {
     // If the year is divisible by 400, or divisible by 4 but not divisible by 100, it's a leap year
@@ -20,6 +20,7 @@ console.log(isLeapYear(2023));
 console.log(isLeapYear(2042));
 
 
+// Number 3
 function calculateBMI(weight, height) {
     // Calculate BMI value
     const bmi = weight / (height * height);
@@ -29,8 +30,8 @@ function calculateBMI(weight, height) {
 }
 
 // Example usage:
-const weight = 75; // in kilograms
-const height = 1.75; // in meters
+const weight = 75; // in kilograms, 165 pounds
+const height = 1.75; // in meters, 5' 9"
 const bmi = calculateBMI(weight, height);
 
 console.log(`Your BMI with weight: ${weight} kgs and height ${height} mts is ${bmi.toFixed(2)} kg/sq.mt`);
