@@ -1,4 +1,4 @@
-/*
+
 // Creating my function for leap year
 function isLeapYear(year) {
     // If the year is divisible by 400, or divisible by 4 but not divisible by 100, it's a leap year
@@ -18,7 +18,6 @@ console.log(isLeapYear(2011));
 console.log(isLeapYear(2018));
 console.log(isLeapYear(2023));
 console.log(isLeapYear(2042));
-*/
 
 
 function calculateBMI(weight, height) {
