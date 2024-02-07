@@ -29,8 +29,9 @@ function calculateBMI(weight, height) {
 }
 
 // Example usage:
-const weight = 70; // in kilograms
+const weight = 75; // in kilograms
 const height = 1.75; // in meters
 const bmi = calculateBMI(weight, height);
 
 console.log(`Your BMI with weight: ${weight} kgs and height ${height} mts is ${bmi.toFixed(2)} kg/sq.mt`);
+
