@@ -14,3 +14,13 @@ console.log(houseForSale);
 
 // b. Delete the property with the key "built"
 delete houseForSale.built;
+
+// Change the age of the owner to be 30 inside "houseForSale"
+houseForSale.owner.age = 30;
+
+// Add a new property: "sale price" -> 312000
+houseForSale["sale price"] = 312000;
+
+// Print out "houseForSale" to the terminal
+console.log("\ne. houseForSale:");
+console.log(houseForSale);
