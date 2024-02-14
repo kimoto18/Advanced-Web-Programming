@@ -4,36 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            background-color: beige;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            margin: 0 auto;
+            width: 500px;
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .title{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .move-icon{
+            height: 120px;
+        }
+
+        .move-button{
+            background-color: transparent;
+            border: none;
+            curser: pointer;
+        }
+
+        .result{
+            font-size: 25px;
+            margin-top: 50px;
+            font-weight: bolder;
+            color: darkolivegreen;
+        }
+
+        .player-icon{
+            background-color: transparent;
+            border: none;
+            height: 120px;
+            cursor: pointer;
+        }
+
+        .versus{
+            font-weight: bold;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+
+        .score{
+            background-color: rgb(180, 239, 180);
+            color: black;
+            height: 40px;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            padding-top: 20px;
+            border-radius: 30px;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+            box-shadow: 2px 2px 5px gray;
+        }
+
+        .reset-score{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .pick-div{
+            display: inline-block;
+        }
+        
+    </style>
   </head>
   <body>
     <!--A rock beats scissors, scissors beat paper by cutting it, and paper beats rock by covering it.-->
-    <p>Rock Paper Scissors</p>
 
-    <!-- Lets move all the code after onclick to a function-->
-    <button onclick="
-      playGame('Rock');
-    ">Rock</button>
+    <div class="container">
+        <p class="title">Rock Paper Scissors</p>
 
-    <button onclick="
-      playGame('Paper');
-    ">Paper</button>
+        <!-- Lets move all the code after onclick to a function-->
+        <button onclick="
+        playGame('Rock');
+        "class="move-button"><img src="/Images/rock.png" class="move-icon"></button>
 
-    <button onclick = "
-      playGame('Scissors');
-    ">Scissors</button>
+        <button onclick="
+        playGame('Paper');
+        "class="move-button"><img src="/Images/paper.png" class="move-icon"></button>
 
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
+        <button onclick = "
+        playGame('Scissors');
+        "class="move-button"><img src="/Images/scissors.png" class="move-icon"></button>
 
-    <button onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
+        <p class="js-result result">Pick a move above!</p>
+        <p class="js-moves">
+            <img src="../Images/human.jpg" class="player-icon"><span class="versus">vs</span><img src="../Images/computer.png" class="player-icon">
+        </p>
+        <p class="js-score score"></p>
 
-    localStorage.removeItem('score');
-    updateScoreElement();
-    ">Reset Score</button>
+        <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+
+        localStorage.removeItem('score');
+        updateScoreElement();
+        updateMoveIcons('humnan', 'computer');
+        " class="reset-score">Reset Score</button>
+    </div>
+
     <script>
 
       let score = JSON.parse(localStorage.getItem('score')) || {
@@ -95,7 +184,8 @@
 
         document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. Computer picked ${compMove}. ${result}.`
 
-         }
+        updateMoveIcons(playerMove, compMove);
+        }
 
       function updateScoreElement() {
         document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
@@ -115,6 +205,26 @@
           compMove = 'scissors';
         }
         return compMove;
+      }
+
+      function updateMoveIcons(p_move, c_move){
+        if (p_move === 'human') {
+            document.querySelector('.js-moves').innerHTML =`<img src="../Images/human.jpg" class="player-icon"><span class="versus">vs</span><img src="../Images/computer.png" class="player-icon">`;
+        } else{
+            document.querySelector('.js-moves').innerHTML = 
+            `
+                <div class="pick-div">
+                    <p>You</p>
+                    <img src="../Images/${p_move}.png" class="player-icon">
+                </div>
+                vs
+                <div class="pick-div">
+                    <p>Computer</p>
+                    <img src="../Images/${c_move}.png" class="player-icon">
+                </div>
+            `;
+        }
+    
       }
     </script>
   </body>
