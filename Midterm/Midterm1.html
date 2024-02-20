@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss Game</title>
+<style>
+    .container {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heads or Tails</h1>
+        <p>Pick either heads or tails:</p>
+        <button onclick="tossCoin('heads')"><img src="/Images/heads.png"></button>
+        <button onclick="tossCoin('tails')"><img src="/Images/tails.png"></button>
+        <p id="result"></p>
+    </div>
+    <script src="/Midterm/Midterm1.js"></script>
+</body>
+</html>
