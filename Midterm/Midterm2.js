@@ -4,7 +4,7 @@ function calculateTicketPrice() {
     let gender = prompt("Please enter your gender (Male/Female)").toLowerCase();
     let age = parseInt(prompt("Please enter your age"));
 
-    let ticketPrice = 100; // Assuming the ticket price is $100 by default
+    let ticketPrice = 100; //Assuming price is $100 normally
 
     // Applying discounts based on age and gender
     if (age < 5) {
@@ -19,9 +19,9 @@ function calculateTicketPrice() {
         ticketPrice *= 0.5; // Females get 50% off
     }
 
-    // Display the price
-    alert("Your ticket price is: $" + ticketPrice.toFixed(2));
+    // Display
+    alert("Ticket price: $" + ticketPrice.toFixed(2));
 }
 
-// Call the function to calculate and display the ticket price
+    //Call the function to calculate and display the ticket price
 calculateTicketPrice();
