@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 HW</title>
+</head>
+<body>
+    <div id='parent'>
+        <div class='child'>Child 1</div>
+        <div class='child' id='apple'>Apple</div>
+        <div class='child' id='orange'>Orange</div>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    
+    <script>
+        //Change the text of Child 1 to ‘First Child’
+        document.querySelector('#parent > .child').textContent = 'First Child';
+
+        //Get the next sibling of Apple
+        const appleNextSibling = document.getElementById('apple').nextElementSibling;
+
+        // Get the first child of “parent” div
+        const firstChildOfParent = document.querySelector('#parent').firstElementChild;
+
+        //Change the color of previous sibling of Orange to ‘green’
+        const orangePreviousSibling = document.getElementById('orange').previousElementSibling;
+        orangePreviousSibling.style.color = 'green';
+
+        //Get the parent of ul
+        const ulParent = document.querySelector('ul').parentNode;
+
+        // Get all the child nodes of ul
+        const ulChildNodes = document.querySelector('ul').childNodes;
+
+        //Change the padding of second child of ul to 10px
+        const secondUlChild = document.querySelector('ul').children[1];
+        secondUlChild.style.padding = '10px';
+
+        // Get all the siblings of Child 1
+        const child1Siblings = Array.from(document.querySelector('.child')).filter(child => child !== document.querySelector('.child'));
+
+        // Give a 2px maroon solid border to the parent of Child 3
+        const parentOfChild3 = document.querySelector('.child:nth-child(3)').parentNode;
+        parentOfChild3.style.border = '2px solid maroon';
+
+    </script>
+</body>
+</html>
