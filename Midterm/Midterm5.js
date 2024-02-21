@@ -1,3 +1,4 @@
+// Function to Submit my name and birth
 function Submit(){
     const Name = display('Name');
     const BD = display('BP');
@@ -5,6 +6,7 @@ function Submit(){
     alert(`Welcome ${Name}, born on ${BD}!`);
 }
 
+//Function to reset
 function reset(){
 
 }

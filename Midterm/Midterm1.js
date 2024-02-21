@@ -10,9 +10,9 @@ function tossCoin(userChoice) {
         resultElement.textContent = "You picked " + userChoice + ", Computer picked " + computerChoice + " – It's a tie!";
     } else if (userChoice === 'heads' && computerChoice === 'tails') {
         // If user picks heads and comp picks tails
-        resultElement.textContent = "You picked heads, Computer picked tails – You Win!";
+        resultElement.textContent = "You picked heads, Computer picked tails. You Win!";
     } else if (userChoice === 'tails' && computerChoice === 'heads') {
         // If user picks tails and comp picks heads
-        resultElement.textContent = "You picked tails, Computer picked heads – You Lose!";
+        resultElement.textContent = "You picked tails, Computer picked heads. You Lose!";
     }
 }
