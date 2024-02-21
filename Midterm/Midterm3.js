@@ -17,4 +17,4 @@ function promptUserForInput() {
 
 promptUserForInput();
 
-alert("Triangle: " + is_triangle, console.log(""));
+
