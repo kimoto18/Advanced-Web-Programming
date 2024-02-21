@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Form</title>
+
+<style>
+    *{
+        margin: auto 0;
+    }
+    #container{
+        margin-top: 10px;
+        text-align: center;
+    }
+   button{
+    margin-top: 20px;
+    width: 140px;
+    text-align: center;
+   }
+
+   #Name{
+    padding-left: 35px;
+    margin-left: 80px;
+    margin-top: 20px;
+    padding-right: 40px;
+    width: 80px;
+   }
+
+   #BD {
+    margin-left: 70px;
+    margin-top: 20px;
+    padding-right: 30px;
+    width: 100px;
+   }
+</style>
+</head>
+<body>
+    <div id="container">
+         <div>
+            <label for="Name">Name:</label>
+             <input type="text" id="Name">
+        </div>
+        <div>
+            <label for="BD">Birth Date:</label>
+            <input type="text" id="BD">
+        </div>
+        <div>
+            <button id="Sub" onclick="alert(`You are ${''}, born on ${''}`);">Submit</button> 
+            <button id="Res">Reset</button>
+        </div>
+    </div>
+
+
+   
+    <script src="/Midterm/Midterm5.js"></script>
+</body>
+</html>
