@@ -46,11 +46,30 @@
             <input type="text" id="BD">
         </div>
         <div>
-            <button id="Sub" onclick="alert(`You are ${''}, born on ${''}`);">Submit</button> 
-            <button id="Res">Reset</button>
+            <button id="Sub" onclick="
+                alert(`Welcome ${Name}, born on ${BD}!`);
+                ">Submit</button> 
+            <button id="Res" onclick="
+            
+            
+            ">Reset</button>
         </div>
     </div>
+    <script>
+        function enterValue(){
+            const Name = display('Name');
+            const BD = display('BP');
+        }
 
+        function reset(){
+
+        }
+
+    </script>
+
+    <p>
+        Could not figure out how to connect a label to the on click
+    </p>
 
    
     <script src="/Midterm/Midterm5.js"></script>
