@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+        // Create a function called fizzbuzz that prints our the numbers with the below conditions.
+        // If the number is divisible by 3, print FIZZ
+        // If the number is divisible by 5, print BUZZ
+        // If the number is divisible by both 3 and 5, print FIZZBUZZ
+
+        function fizzbuzz(n) {
+            for (let i = 1; i <= n; i++) {
+                if (i % 3 === 0) {
+                    console.log("FIZZ");
+                } else if (i % 5 === 0) {
+                    console.log("BUZZ");
+                } else if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("FIZZBUZZ");
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+
+        fizzbuzz(30);
+
+    </script>
+</body>
+</html>
