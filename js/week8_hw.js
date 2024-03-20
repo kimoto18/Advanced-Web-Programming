@@ -8,15 +8,15 @@ while (playGame) {
     let userWins = false;
 
     while (attempts > 0) {
-        // Ask user to guess a number
+        // Ask user to guess number
         let userGuess = parseInt(prompt(`Guess a number between 1 and 100. You have ${attempts} attempts:`));
 
-        // Check if user's guess is correct
+        // Check if user guess is correct
         if (userGuess === randomNumber) {
             userWins = true;
             break;
         } else {
-            // Check if the guess is too high or too low
+            // Check if the guess is high or low
             if (userGuess > randomNumber) {
                 alert("Too high! Try again.");
             } else {
