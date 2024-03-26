@@ -6,7 +6,7 @@ function choosePlayerDice(ran_num, player_num) {
     let random_dice_img = `dice${ran_num}.png`;
     // console.log(random_dice_img);
 
-    let random_img_src = `/Images/${random_dice_img}`;
+    let random_img_src = `images/${random_dice_img}`;
     // console.log(random_img_src);
 
     let img_elem = document.querySelectorAll('img')[player_num - 1];
