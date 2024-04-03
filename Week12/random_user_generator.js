@@ -4,7 +4,7 @@ function fetchUser() {
         .then(data => displayUser(data.results[0]))
 }
 
-fetchUser();
+//fetchUser();
 
 function displayUser(user) {
     const userDisplay = document.querySelector('#user');
