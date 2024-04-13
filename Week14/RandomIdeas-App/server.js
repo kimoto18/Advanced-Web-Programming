@@ -29,20 +29,9 @@ const app = express();
 //Get all ideas endpoint
 app.get('/', req, res => {
     res.send('Welcome to Random Ideas')
-})
-//Get single idea
-app.get('/api/ideas:id', (req, res) => {
-    //req.params.id
-    const idea = ideas.find((idea) => idea.id === +req.params.id)
+});
 
-    if(!idea) {
-       return res
-       .status(404)
-       .json({success: false, error: 'Resource not found'});
-    } else{
-       return res.json({success: true, data: idea});
-    }
-})
+const ideaRouter = req (./routes/ideas.js)
     
 app.listen(port, () => console.log('Server listening on port ${port}'));
 
