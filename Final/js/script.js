@@ -242,11 +242,6 @@ function displayUser(user, playerId) {
 
 // Event Listener
 document.querySelector('#js-generate').addEventListener('click', fetchUser);
-
-
-
-
-// Add event listeners
 document.getElementById('start-btn').addEventListener('click', startGame);
 document.getElementById('hit-btn').addEventListener('click', hit);
 document.getElementById('stand-btn').addEventListener('click', stand);
