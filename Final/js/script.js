@@ -221,12 +221,12 @@ async function fetchUser() {
     }
 }
 
-// Function to generate a random 6-digit player ID
+// Random 6-digit player ID
 function generateRandomId() {
     return Math.floor(100000 + Math.random() * 900000);
 }
 
-// Function to display user information on the page
+// Function to display user info
 function displayUser(user, playerId) {
     const userDisplay = document.querySelector('#user');
     userDisplay.innerHTML = `

@@ -12,9 +12,24 @@ body {
     height: 500px;
 }
 
+p{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 h1 {
     font-size: 3em;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    text-align: center;
+    padding: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -22,6 +37,7 @@ h1 {
     text-align: center;
     margin-top: 80px;
 }
+
 
 .cards-container {
     display: flex;
@@ -52,7 +68,7 @@ h1 {
     font-size: 1.5em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(45deg, #3498db, #2ecc71);
+    background-image: linear-gradient(45deg, red, gold);
 }
 
 .card.hidden {
@@ -91,3 +107,10 @@ button:hover {
     height: 200px;
     width: 300px;
 }
+
+body {
+    background-image: url('/Final/Images/dragon.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
