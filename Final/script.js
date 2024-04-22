@@ -47,13 +47,16 @@ function startGame() {
     shuffleDeck();
 
     // Deal initial cards to player and dealer
-    playerCards.push(dealCard(), dealCard());
-    dealerCards.push(dealCard(), dealCard());
+    playerCards.push(dealCard());
+    dealerCards.push(dealCard()); // Dealer's first card is face up
+    playerCards.push(dealCard());
+    dealerCards.push(dealCard()); // Dealer's second card is face down
 
     // Display cards on the screen
     displayCards();
     updateScores();
 }
+
 
 // Function to display cards on the screen
 function displayCards() {
@@ -201,38 +204,52 @@ function determineWinner() {
     }
 }
 
+// Function to fetch random user data from the API
+async function fetchUser() {
+    try {
+        const response = await fetch('https://randomuser.me/api/');
+        const data = await response.json();
+        const user = data.results[0];
 
-// Blackjack Game JavaScript Code
+        // Generate a random 6-digit player ID
+        const playerId = generateRandomId();
 
-// Fetch random user data from the API
-function fetchRandomUser() {
-    const url = 'https://randomuser.me/api/';
-    
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            displayUserInfo(data.results[0]);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+        // Display user information
+        displayUser(user, playerId);
+    } catch (error) {
+        console.error('Error fetching random user:', error);
+    }
 }
 
-// Display the fetched user data
-function displayUserInfo(user) {
-    const userInfoDiv = document.getElementById('user-info');
-    userInfoDiv.innerHTML = `
-        <img src="${user.picture.large}" alt="User Image">
-        <p>Name: ${user.name.first} ${user.name.last}</p>
-        <p>Email: ${user.email}</p>
-        <p>Location: ${user.location.city}, ${user.location.country}</p>
+// Function to generate a random 6-digit player ID
+function generateRandomId() {
+    return Math.floor(100000 + Math.random() * 900000);
+}
+
+// Function to display user information on the page
+function displayUser(user, playerId) {
+    const userDisplay = document.querySelector('#user');
+    userDisplay.innerHTML = `
+        <div>
+            <img src="${user.picture.large}"/>
+            <div>
+                <p>Name: ${user.name.first} ${user.name.last} </p>
+                <p>Player ID: ${playerId}</p>
+            </div>
+        </div>
     `;
 }
 
-// ... (Rest of your existing Blackjack game JavaScript code)
+// Event Listener
+document.querySelector('#js-generate').addEventListener('click', fetchUser);
+
+
+
+
+// Add event listeners
+document.getElementById('start-btn').addEventListener('click', startGame);
+document.getElementById('hit-btn').addEventListener('click', hit);
+document.getElementById('stand-btn').addEventListener('click', stand);
+document.getElementById('double-down-btn').addEventListener('click', doubleDown);
+document.getElementById('split-btn').addEventListener('click', split);
 

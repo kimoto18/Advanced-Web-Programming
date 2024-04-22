@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Blackjack Game</h1>
+        <h1><img class="logo" src="Images/Logo.png"></h1>
         <div class="cards-container">
             <div class="dealer">
                 <h2>Dealer's Hand</h2>
@@ -30,16 +30,16 @@
         </div>
         <div class="result" id="result"></div>
     </div>
-    <!-- Fetch API Section -->
+
     <section id="fetch-section">
-        <h2>Random User</h2>
-        <div id="user-info"></div>
-        <button onclick="fetchRandomUser()">Get Random User</button>
+        <div class="container">
+            <h2>Player</h2>
+            <button id="js-generate">Generate Random Player</button>
+            <div id="user"></div>
+        </div>
     </section>
 
-    <!-- Blackjack Game Section -->
     <section id="game-section">
-        <!-- Your existing Blackjack game HTML here -->
     </section>
     <script src="script.js"></script>
 </body>
